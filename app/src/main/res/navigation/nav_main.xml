@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/productsFragment">
+
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.example.testapplication.feature_products_view.fragments.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/action_productsFragment_to_dataProductFragment"
+            app:destination="@id/dataProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataProductFragment"
+        android:name="com.example.testapplication.feature_products_view.fragments.DataProductFragment"
+        android:label="fragment_data_product"
+        tools:layout="@layout/fragment_data_product" >
+        <argument
+            android:name="dataProduct"
+            app:argType="com.example.testapplication.core.pojos.ResponseProduct" />
+        <action
+            android:id="@+id/action_dataProductFragment_to_productsFragment"
+            app:destination="@id/productsFragment"
+            app:popUpTo="@id/nav_main"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

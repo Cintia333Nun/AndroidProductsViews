@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PRODUCTS</string>
+
+    <!-- PRODUCTS FRAGMENT -->
+    <string name="title_products">Productos</string>
+
+    <!-- DATA PRODUCT FRAGMENT -->
+    <string name="image_product_description">Imagen del producto</string>
+    <string name="button_back">Regresar</string>
+</resources>
